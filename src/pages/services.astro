@@ -1,0 +1,349 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ServiceCard from "../components/ServiceCard.astro";
+import EquipmentShowcase from "../components/EquipmentShowcase.astro";
+
+// Service data
+const weddingFeatures = [
+  "Ceremony sound system & microphones",
+  "Cocktail hour background music",
+  "Reception DJ services (4-6 hours)",
+  "Wireless microphones for toasts",
+  "Dance floor lighting package",
+  "Music consultation & custom playlist",
+  "Timeline coordination with vendors",
+  "Backup equipment & emergency plan",
+];
+
+const corporateFeatures = [
+  "Professional presentation audio",
+  "Background music curation",
+  "Wireless microphone systems",
+  "Conference call integration",
+  "Break/networking music",
+  "Award ceremony support",
+  "Professional appearance & setup",
+  "Technical support throughout event",
+];
+
+const clubFeatures = [
+  "High-energy dance music mixing",
+  "Club-style lighting effects",
+  "Crowd reading & engagement",
+  "Seamless track transitions",
+  "Dance floor management",
+  "Professional crowd interaction",
+  "Social media integration",
+  "Extended hours available",
+];
+
+// Icons as HTML strings
+const weddingIcon =
+  '<svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path></svg>';
+
+const corporateIcon =
+  '<svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20"><path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"></path></svg>';
+
+const clubIcon =
+  '<svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20"><path d="M18 3a1 1 0 00-1.196-.98l-10 2A1 1 0 006 5v9.114A4.369 4.369 0 005 14c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V7.82l8-1.6v5.894A4.37 4.37 0 0015 12c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V3z"></path></svg>';
+---
+
+<Layout
+  title="DJ Services - Weddings, Corporate Events & Pop-up Clubs | DJ Otter Claw"
+  description="Professional DJ services for weddings, corporate events, and pop-up club nights in Franklin, TN. Complete packages with sound, lighting, and music curation."
+>
+  <div class="min-h-screen bg-midnight-950">
+    <!-- Hero Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto text-center">
+        <h1
+          class="text-4xl sm:text-5xl md:text-6xl font-bold text-midnight-50 mb-6"
+        >
+          Professional <span class="text-electric-blue">DJ Services</span>
+        </h1>
+        <p class="text-xl sm:text-2xl text-midnight-300 max-w-4xl mx-auto mb-8">
+          From intimate weddings to corporate events and high-energy pop-up club
+          nights, I provide comprehensive music and audio solutions tailored to
+          your vision.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4 text-midnight-400">
+          <span
+            class="bg-midnight-800/50 px-4 py-2 rounded-full border border-midnight-700"
+          >
+            🎵 5+ Years Experience
+          </span>
+          <span
+            class="bg-midnight-800/50 px-4 py-2 rounded-full border border-midnight-700"
+          >
+            🎧 100+ Events Completed
+          </span>
+          <span
+            class="bg-midnight-800/50 px-4 py-2 rounded-full border border-midnight-700"
+          >
+            🔊 Professional Equipment
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-3 gap-8">
+          <ServiceCard
+            title="Wedding DJ"
+            description="Create magical moments with carefully curated music for your ceremony, cocktail hour, and reception. From romantic first dances to packed dance floors, I'll ensure your special day sounds perfect."
+            features={weddingFeatures}
+            pricing="$1,200"
+            icon={weddingIcon}
+            accentColor="electric-blue"
+            id="wedding"
+          />
+
+          <ServiceCard
+            title="Corporate Events"
+            description="Professional audio solutions for conferences, corporate parties, product launches, and networking events. Clean, reliable service that enhances your brand and keeps your event running smoothly."
+            features={corporateFeatures}
+            pricing="$900"
+            icon={corporateIcon}
+            accentColor="cyber-purple"
+            id="corporate"
+          />
+
+          <ServiceCard
+            title="Pop-up Club"
+            description="High-energy dance music experiences that transform any venue into a vibrant club atmosphere. Perfect for private parties, birthday celebrations, and special occasions that demand non-stop dancing."
+            features={clubFeatures}
+            pricing="$700"
+            icon={clubIcon}
+            accentColor="neon-teal"
+            id="club"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Equipment Showcase -->
+    <EquipmentShowcase />
+
+    <!-- Music Genres Section -->
+    <section class="py-16 bg-midnight-900/30">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl sm:text-4xl font-bold text-midnight-50 mb-4">
+            Extensive <span class="text-electric-blue">Music Library</span>
+          </h2>
+          <p class="text-lg text-midnight-300 max-w-3xl mx-auto">
+            From classic hits to the latest chart-toppers, I maintain a
+            comprehensive music collection spanning decades and genres
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Wedding Music -->
+          <div
+            class="bg-midnight-800/50 border border-midnight-700 rounded-xl p-6"
+          >
+            <h3 class="text-xl font-bold text-electric-blue mb-4 text-center">
+              Wedding Favorites
+            </h3>
+            <ul class="text-sm text-midnight-300 space-y-2">
+              <li>• Classic love songs</li>
+              <li>• Contemporary romantic hits</li>
+              <li>• First dance specialties</li>
+              <li>• Parent dance classics</li>
+              <li>• Reception dance hits</li>
+              <li>• Ceremony processionals</li>
+            </ul>
+          </div>
+
+          <!-- Corporate Appropriate -->
+          <div
+            class="bg-midnight-800/50 border border-midnight-700 rounded-xl p-6"
+          >
+            <h3 class="text-xl font-bold text-cyber-purple mb-4 text-center">
+              Corporate Friendly
+            </h3>
+            <ul class="text-sm text-midnight-300 space-y-2">
+              <li>• Ambient background music</li>
+              <li>• Jazz & instrumental</li>
+              <li>• Soft rock classics</li>
+              <li>• Modern easy listening</li>
+              <li>• Networking energy tracks</li>
+              <li>• Award ceremony themes</li>
+            </ul>
+          </div>
+
+          <!-- Dance Floor Hits -->
+          <div
+            class="bg-midnight-800/50 border border-midnight-700 rounded-xl p-6"
+          >
+            <h3 class="text-xl font-bold text-neon-teal mb-4 text-center">
+              Dance Floor
+            </h3>
+            <ul class="text-sm text-midnight-300 space-y-2">
+              <li>• Current pop hits</li>
+              <li>• Hip-hop & R&B</li>
+              <li>• Electronic dance music</li>
+              <li>• Latin & reggaeton</li>
+              <li>• 80s/90s throwbacks</li>
+              <li>• Party anthems</li>
+            </ul>
+          </div>
+
+          <!-- Special Requests -->
+          <div
+            class="bg-midnight-800/50 border border-midnight-700 rounded-xl p-6"
+          >
+            <h3 class="text-xl font-bold text-electric-blue mb-4 text-center">
+              Custom Requests
+            </h3>
+            <ul class="text-sm text-midnight-300 space-y-2">
+              <li>• Country & folk</li>
+              <li>• Rock & alternative</li>
+              <li>• International music</li>
+              <li>• Holiday & seasonal</li>
+              <li>• Rare finds & deep cuts</li>
+              <li>• Live mixing & mashups</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Information -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl sm:text-4xl font-bold text-midnight-50 mb-4">
+            Transparent <span class="text-electric-blue">Pricing</span>
+          </h2>
+          <p class="text-lg text-midnight-300">
+            No hidden fees, no surprises. Just professional service at fair
+            prices.
+          </p>
+        </div>
+
+        <div
+          class="bg-midnight-800/50 border border-midnight-700 rounded-2xl p-8"
+        >
+          <div class="grid md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-xl font-bold text-electric-blue mb-4">
+                What's Included
+              </h3>
+              <ul class="space-y-3 text-midnight-300">
+                <li class="flex items-center">
+                  <svg
+                    class="w-5 h-5 text-neon-teal mr-3"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  Professional consultation & planning
+                </li>
+                <li class="flex items-center">
+                  <svg
+                    class="w-5 h-5 text-neon-teal mr-3"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  All equipment setup & breakdown
+                </li>
+                <li class="flex items-center">
+                  <svg
+                    class="w-5 h-5 text-neon-teal mr-3"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  Custom playlist curation
+                </li>
+                <li class="flex items-center">
+                  <svg
+                    class="w-5 h-5 text-neon-teal mr-3"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  Professional liability insurance
+                </li>
+                <li class="flex items-center">
+                  <svg
+                    class="w-5 h-5 text-neon-teal mr-3"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  Backup equipment & contingency plan
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-bold text-electric-blue mb-4">
+                Additional Options
+              </h3>
+              <ul class="space-y-3 text-midnight-300">
+                <li class="flex justify-between">
+                  <span>Extended hours (per hour)</span>
+                  <span class="text-electric-blue">$150</span>
+                </li>
+                <li class="flex justify-between">
+                  <span>Additional lighting package</span>
+                  <span class="text-electric-blue">$300</span>
+                </li>
+                <li class="flex justify-between">
+                  <span>Live mixing & scratching</span>
+                  <span class="text-electric-blue">$200</span>
+                </li>
+                <li class="flex justify-between">
+                  <span>Multiple venue setup</span>
+                  <span class="text-electric-blue">$400</span>
+                </li>
+                <li class="flex justify-between">
+                  <span>Special song acquisition</span>
+                  <span class="text-electric-blue">$50</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="mt-8 pt-8 border-t border-midnight-700 text-center">
+            <p class="text-midnight-400 mb-4">
+              All packages require a 50% deposit to secure your date. Final
+              payment due 7 days before event.
+            </p>
+            <a
+              href="/booking"
+              class="inline-block bg-electric-blue hover:bg-cyber-purple text-midnight-950 font-semibold px-8 py-3 rounded-lg text-lg transition-all duration-300 transform hover:scale-105"
+            >
+              Get Your Custom Quote
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>

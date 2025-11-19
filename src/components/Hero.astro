@@ -1,0 +1,85 @@
+---
+import { Image } from "astro:assets";
+import logo from "../assets/DJ Otter Claw.png";
+---
+
+<section
+  class="relative min-h-screen flex items-center justify-center overflow-hidden"
+>
+  <!-- Background Pattern -->
+  <div
+    class="absolute inset-0 bg-linear-to-br from-midnight-900 via-midnight-950 to-midnight-900"
+  >
+  </div>
+  <div
+    class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(100,200,255,0.05),transparent_50%)]"
+  >
+  </div>
+
+  <!-- Content -->
+  <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+    <!-- Logo -->
+    <div class="mb-8">
+      <Image src={logo} alt="DJ Otter Claw Logo" class="w-lg h-auto mx-auto" />
+    </div>
+
+    <!-- Main Heading -->
+    <h1
+      class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-midnight-50 mb-6"
+    >
+      <span class="block">Welcome to</span>
+      <span class="block text-electric-blue">DJ Otter Claw</span>
+    </h1>
+
+    <!-- Subheading -->
+    <p
+      class="text-xl sm:text-2xl md:text-3xl text-midnight-200 mb-8 max-w-3xl mx-auto leading-relaxed"
+    >
+      Professional DJ services in <span class="text-neon-teal"
+        >Franklin, TN</span
+      > and surrounding areas
+    </p>
+
+    <!-- Description -->
+    <p class="text-lg sm:text-xl text-midnight-300 mb-12 max-w-2xl mx-auto">
+      From intimate weddings to corporate events and high-energy pop-up club
+      nights, We deliver unforgettable musical experiences tailored to your
+      vision.
+    </p>
+
+    <!-- Call to Action Buttons -->
+    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+      <a
+        href="/booking"
+        class="bg-electric-blue hover:bg-cyber-purple text-midnight-950 font-semibold px-8 py-4 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+      >
+        Book Your Event
+      </a>
+      <a
+        href="/services"
+        class="border-2 border-electric-blue text-electric-blue hover:bg-electric-blue hover:text-midnight-950 font-semibold px-8 py-4 rounded-lg text-lg transition-all duration-300 transform hover:scale-105"
+      >
+        View Services
+      </a>
+    </div>
+  </div>
+
+  <!-- Scroll Indicator -->
+  <div
+    class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce"
+  >
+    <svg
+      class="w-6 h-6 text-electric-blue"
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+    </svg>
+  </div>
+</section>

@@ -1,17 +1,118 @@
 ---
 import "../styles/global.css";
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
+
+export interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  noIndex?: boolean;
+}
+
+const {
+  title = "DJ Otter Claw - Professional DJ Services | Franklin, TN",
+  description = "Elliott Clark provides professional DJ services for weddings, corporate events, and pop-up club nights in Franklin, TN and surrounding Middle Tennessee areas. High-quality sound, lighting, and music curation.",
+  image = "/og-image.jpg",
+  noIndex = false,
+} = Astro.props;
+
+const canonicalURL = new URL(
+  Astro.url.pathname,
+  Astro.site || "http://localhost:3000",
+);
+const socialImage = new URL(image, Astro.site || "http://localhost:3000");
 ---
 
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>DJ Otter Claw</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Primary Meta Tags -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <meta
+      name="keywords"
+      content="DJ Franklin TN, wedding DJ Tennessee, corporate event DJ, pop-up club DJ, Elliott Clark, professional DJ services, sound system rental, party DJ Nashville"
+    />
+    <meta name="author" content="Elliott Clark" />
+    <link rel="canonical" href={canonicalURL} />
+
+    {noIndex && <meta name="robots" content="noindex, nofollow" />}
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={socialImage} />
+    <meta property="og:site_name" content="DJ Otter Claw" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={Astro.url} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={socialImage} />
+
+    <!-- Structured Data -->
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        name: "DJ Otter Claw",
+        alternateName: "Elliott Clark DJ Services",
+        description: description,
+        url: Astro.site,
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Franklin",
+          addressRegion: "TN",
+          addressCountry: "US",
+        },
+        areaServed: [
+          "Franklin, TN",
+          "Nashville, TN",
+          "Murfreesboro, TN",
+          "Middle Tennessee",
+        ],
+        serviceType: [
+          "Wedding DJ Services",
+          "Corporate Event DJ",
+          "Pop-up Club DJ",
+          "Sound System Rental",
+        ],
+        founder: {
+          "@type": "Person",
+          name: "Elliott Clark",
+        },
+        priceRange: "$700-$2000",
+      })}
+    />
+
+    <!-- Preload Critical Fonts -->
+    <link
+      rel="preload"
+      href="/fonts/inter-var.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+  </head>
+  <body
+    class="min-h-screen bg-midnight-950 text-midnight-50 font-sans antialiased"
+  >
+    <Navigation />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
 </html>

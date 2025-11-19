@@ -1,0 +1,165 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout
+  title="Thank You - Booking Inquiry Received | DJ Otter Claw"
+  description="Thank you for your booking inquiry! I'll get back to you within 24 hours to discuss your event details."
+>
+  <div
+    class="min-h-screen bg-midnight-950 flex items-center justify-center px-4 sm:px-6 lg:px-8"
+  >
+    <div class="max-w-2xl mx-auto text-center">
+      <!-- Success Icon -->
+      <div class="mb-8">
+        <div
+          class="w-24 h-24 bg-electric-blue/20 rounded-full flex items-center justify-center mx-auto mb-4"
+        >
+          <svg
+            class="w-12 h-12 text-electric-blue"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Success Message -->
+      <h1 class="text-4xl sm:text-5xl font-bold text-midnight-50 mb-6">
+        Thank You!
+      </h1>
+
+      <p class="text-xl sm:text-2xl text-electric-blue mb-8">
+        Your booking inquiry has been received
+      </p>
+
+      <div
+        class="bg-midnight-800/50 border border-midnight-700 rounded-xl p-8 mb-8"
+      >
+        <h2 class="text-2xl font-bold text-midnight-50 mb-4">
+          What happens next?
+        </h2>
+
+        <div class="space-y-4 text-left">
+          <div class="flex items-start">
+            <div
+              class="w-8 h-8 bg-electric-blue/20 rounded-full flex items-center justify-center mr-4 mt-1"
+            >
+              <span class="text-electric-blue font-bold text-sm">1</span>
+            </div>
+            <div>
+              <h3 class="font-semibold text-midnight-50 mb-1">
+                Review & Response
+              </h3>
+              <p class="text-midnight-300">
+                I'll review your event details and respond within 24 hours with
+                availability and initial pricing.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start">
+            <div
+              class="w-8 h-8 bg-electric-blue/20 rounded-full flex items-center justify-center mr-4 mt-1"
+            >
+              <span class="text-electric-blue font-bold text-sm">2</span>
+            </div>
+            <div>
+              <h3 class="font-semibold text-midnight-50 mb-1">
+                Consultation Call
+              </h3>
+              <p class="text-midnight-300">
+                We'll schedule a brief call to discuss your vision, music
+                preferences, and specific needs.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start">
+            <div
+              class="w-8 h-8 bg-electric-blue/20 rounded-full flex items-center justify-center mr-4 mt-1"
+            >
+              <span class="text-electric-blue font-bold text-sm">3</span>
+            </div>
+            <div>
+              <h3 class="font-semibold text-midnight-50 mb-1">
+                Custom Proposal
+              </h3>
+              <p class="text-midnight-300">
+                You'll receive a detailed proposal with services, timeline, and
+                final pricing for your event.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Information -->
+      <div
+        class="bg-midnight-900/50 border border-midnight-700 rounded-xl p-6 mb-8"
+      >
+        <h3 class="text-lg font-bold text-electric-blue mb-4">
+          Need immediate assistance?
+        </h3>
+        <div
+          class="flex flex-col sm:flex-row justify-center items-center gap-4 text-midnight-300"
+        >
+          <a
+            href="tel:+14155625275"
+            class="flex items-center hover:text-electric-blue transition-colors duration-200"
+          >
+            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path
+                d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"
+              ></path>
+            </svg>
+            (415) 56-CLARK
+          </a>
+          <span class="hidden sm:block text-midnight-600">•</span>
+          <a
+            href="mailto:elliott@djotterclaw.com"
+            class="flex items-center hover:text-electric-blue transition-colors duration-200"
+          >
+            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path
+                d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"
+              ></path>
+              <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"
+              ></path>
+            </svg>
+            elliott@djotterclaw.com
+          </a>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="/"
+          class="bg-electric-blue hover:bg-cyber-purple text-midnight-950 font-semibold px-8 py-3 rounded-lg transition-all duration-300 transform hover:scale-105"
+        >
+          Return Home
+        </a>
+        <a
+          href="/services"
+          class="border-2 border-electric-blue text-electric-blue hover:bg-electric-blue hover:text-midnight-950 font-semibold px-8 py-3 rounded-lg transition-all duration-300"
+        >
+          View Services
+        </a>
+      </div>
+
+      <!-- Social Proof -->
+      <div class="mt-12 text-center">
+        <p class="text-midnight-400 text-sm">
+          Join 100+ satisfied clients who trust DJ Otter Claw for their special
+          events
+        </p>
+      </div>
+    </div>
+  </div>
+</Layout>

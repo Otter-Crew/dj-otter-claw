@@ -1,0 +1,277 @@
+---
+// Contact Form component with Netlify Forms integration
+---
+
+<form
+  name="booking-inquiry"
+  method="POST"
+  data-netlify="true"
+  netlify-honeypot="bot-field"
+  action="/booking/success"
+  class="space-y-6"
+>
+  <!-- Honeypot field for spam protection -->
+  <input type="hidden" name="form-name" value="booking-inquiry" />
+  <div class="hidden">
+    <label
+      >Don't fill this out if you're human: <input name="bot-field" /></label
+    >
+  </div>
+
+  <!-- Personal Information -->
+  <div class="grid md:grid-cols-2 gap-6">
+    <div>
+      <label
+        for="name"
+        class="block text-sm font-medium text-midnight-200 mb-2"
+      >
+        Full Name *
+      </label>
+      <input
+        type="text"
+        name="name"
+        id="name"
+        required
+        class="w-full px-4 py-3 bg-midnight-800 border border-midnight-700 rounded-lg text-midnight-50 placeholder-midnight-400 focus:border-electric-blue focus:outline-none focus:ring-1 focus:ring-electric-blue transition-colors duration-200"
+        placeholder="Your full name"
+      />
+    </div>
+
+    <div>
+      <label
+        for="email"
+        class="block text-sm font-medium text-midnight-200 mb-2"
+      >
+        Email Address *
+      </label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        required
+        class="w-full px-4 py-3 bg-midnight-800 border border-midnight-700 rounded-lg text-midnight-50 placeholder-midnight-400 focus:border-electric-blue focus:outline-none focus:ring-1 focus:ring-electric-blue transition-colors duration-200"
+        placeholder="your@email.com"
+      />
+    </div>
+  </div>
+
+  <!-- Contact Information -->
+  <div class="grid md:grid-cols-2 gap-6">
+    <div>
+      <label
+        for="phone"
+        class="block text-sm font-medium text-midnight-200 mb-2"
+      >
+        Phone Number
+      </label>
+      <input
+        type="tel"
+        name="phone"
+        id="phone"
+        class="w-full px-4 py-3 bg-midnight-800 border border-midnight-700 rounded-lg text-midnight-50 placeholder-midnight-400 focus:border-electric-blue focus:outline-none focus:ring-1 focus:ring-electric-blue transition-colors duration-200"
+        placeholder="(555) 123-4567"
+      />
+    </div>
+
+    <div>
+      <label
+        for="service-type"
+        class="block text-sm font-medium text-midnight-200 mb-2"
+      >
+        Service Type *
+      </label>
+      <select
+        name="service-type"
+        id="service-type"
+        required
+        class="w-full px-4 py-3 bg-midnight-800 border border-midnight-700 rounded-lg text-midnight-50 focus:border-electric-blue focus:outline-none focus:ring-1 focus:ring-electric-blue transition-colors duration-200"
+      >
+        <option value="">Select a service</option>
+        <option value="wedding">Wedding DJ</option>
+        <option value="corporate">Corporate Event</option>
+        <option value="club">Pop-up Club</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Event Details -->
+  <div class="grid md:grid-cols-2 gap-6">
+    <div>
+      <label
+        for="event-date"
+        class="block text-sm font-medium text-midnight-200 mb-2"
+      >
+        Event Date *
+      </label>
+      <input
+        type="date"
+        name="event-date"
+        id="event-date"
+        required
+        class="w-full px-4 py-3 bg-midnight-800 border border-midnight-700 rounded-lg text-midnight-50 focus:border-electric-blue focus:outline-none focus:ring-1 focus:ring-electric-blue transition-colors duration-200"
+      />
+    </div>
+
+    <div>
+      <label
+        for="guest-count"
+        class="block text-sm font-medium text-midnight-200 mb-2"
+      >
+        Expected Guest Count
+      </label>
+      <input
+        type="number"
+        name="guest-count"
+        id="guest-count"
+        min="1"
+        class="w-full px-4 py-3 bg-midnight-800 border border-midnight-700 rounded-lg text-midnight-50 placeholder-midnight-400 focus:border-electric-blue focus:outline-none focus:ring-1 focus:ring-electric-blue transition-colors duration-200"
+        placeholder="Number of guests"
+      />
+    </div>
+  </div>
+
+  <!-- Venue Information -->
+  <div class="grid md:grid-cols-2 gap-6">
+    <div>
+      <label
+        for="venue-name"
+        class="block text-sm font-medium text-midnight-200 mb-2"
+      >
+        Venue Name
+      </label>
+      <input
+        type="text"
+        name="venue-name"
+        id="venue-name"
+        class="w-full px-4 py-3 bg-midnight-800 border border-midnight-700 rounded-lg text-midnight-50 placeholder-midnight-400 focus:border-electric-blue focus:outline-none focus:ring-1 focus:ring-electric-blue transition-colors duration-200"
+        placeholder="Venue or location name"
+      />
+    </div>
+
+    <div>
+      <label
+        for="venue-location"
+        class="block text-sm font-medium text-midnight-200 mb-2"
+      >
+        Venue City/Location
+      </label>
+      <input
+        type="text"
+        name="venue-location"
+        id="venue-location"
+        class="w-full px-4 py-3 bg-midnight-800 border border-midnight-700 rounded-lg text-midnight-50 placeholder-midnight-400 focus:border-electric-blue focus:outline-none focus:ring-1 focus:ring-electric-blue transition-colors duration-200"
+        placeholder="Franklin, TN"
+      />
+    </div>
+  </div>
+
+  <!-- Event Details -->
+  <div>
+    <label
+      for="event-duration"
+      class="block text-sm font-medium text-midnight-200 mb-2"
+    >
+      Event Duration & Timeline
+    </label>
+    <input
+      type="text"
+      name="event-duration"
+      id="event-duration"
+      class="w-full px-4 py-3 bg-midnight-800 border border-midnight-700 rounded-lg text-midnight-50 placeholder-midnight-400 focus:border-electric-blue focus:outline-none focus:ring-1 focus:ring-electric-blue transition-colors duration-200"
+      placeholder="e.g., 6:00 PM - 11:00 PM (5 hours)"
+    />
+  </div>
+
+  <!-- Budget Range -->
+  <div>
+    <label
+      for="budget-range"
+      class="block text-sm font-medium text-midnight-200 mb-2"
+    >
+      Budget Range
+    </label>
+    <select
+      name="budget-range"
+      id="budget-range"
+      class="w-full px-4 py-3 bg-midnight-800 border border-midnight-700 rounded-lg text-midnight-50 focus:border-electric-blue focus:outline-none focus:ring-1 focus:ring-electric-blue transition-colors duration-200"
+    >
+      <option value="">Select budget range</option>
+      <option value="under-700">Under $700</option>
+      <option value="700-1000">$700 - $1,000</option>
+      <option value="1000-1500">$1,000 - $1,500</option>
+      <option value="1500-2000">$1,500 - $2,000</option>
+      <option value="2000-plus">$2,000+</option>
+    </select>
+  </div>
+
+  <!-- Additional Details -->
+  <div>
+    <label
+      for="message"
+      class="block text-sm font-medium text-midnight-200 mb-2"
+    >
+      Tell me about your event *
+    </label>
+    <textarea
+      name="message"
+      id="message"
+      rows="5"
+      required
+      class="w-full px-4 py-3 bg-midnight-800 border border-midnight-700 rounded-lg text-midnight-50 placeholder-midnight-400 focus:border-electric-blue focus:outline-none focus:ring-1 focus:ring-electric-blue transition-colors duration-200"
+      placeholder="Describe your event, music preferences, special requests, or any questions you have..."
+    ></textarea>
+  </div>
+
+  <!-- Special Requests -->
+  <div>
+    <label class="flex items-start">
+      <input
+        type="checkbox"
+        name="special-requests"
+        value="lighting-package"
+        class="mt-1 mr-3 w-4 h-4 text-electric-blue bg-midnight-800 border-midnight-700 rounded focus:ring-electric-blue focus:ring-2"
+      />
+      <span class="text-sm text-midnight-300">
+        I'm interested in additional lighting packages
+      </span>
+    </label>
+  </div>
+
+  <div>
+    <label class="flex items-start">
+      <input
+        type="checkbox"
+        name="newsletter"
+        value="yes"
+        class="mt-1 mr-3 w-4 h-4 text-electric-blue bg-midnight-800 border-midnight-700 rounded focus:ring-electric-blue focus:ring-2"
+      />
+      <span class="text-sm text-midnight-300">
+        Send me occasional updates about services and music trends
+      </span>
+    </label>
+  </div>
+
+  <!-- Submit Button -->
+  <div class="pt-6">
+    <button
+      type="submit"
+      class="w-full bg-electric-blue hover:bg-cyber-purple text-midnight-950 font-semibold py-4 px-6 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-electric-blue focus:ring-offset-2 focus:ring-offset-midnight-900"
+    >
+      Send My Inquiry
+    </button>
+  </div>
+
+  <!-- Form Footer -->
+  <div
+    class="text-center text-sm text-midnight-400 border-t border-midnight-700 pt-6"
+  >
+    <p>
+      Response time: Usually within 24 hours. For urgent requests, call
+      <a
+        href="tel:+14155625275"
+        class="text-electric-blue hover:text-cyber-purple">(415) 56-CLARK</a
+      >
+    </p>
+  </div>
+</form>

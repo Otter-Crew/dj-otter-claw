@@ -1,1 +1,29 @@
 @import "tailwindcss";
+
+@theme {
+  /* Deep Blue Brand Palette - Much Darker */
+  --color-midnight-50: oklch(0.85 0.008 240);
+  --color-midnight-100: oklch(0.75 0.012 240);
+  --color-midnight-200: oklch(0.65 0.018 240);
+  --color-midnight-300: oklch(0.45 0.024 240);
+  --color-midnight-400: oklch(0.35 0.032 240);
+  --color-midnight-500: oklch(0.25 0.04 240);
+  --color-midnight-600: oklch(0.2 0.035 240);
+  --color-midnight-700: oklch(0.15 0.03 240);
+  --color-midnight-800: oklch(0.1 0.025 240);
+  --color-midnight-900: oklch(0.06 0.02 240);
+  --color-midnight-950: oklch(0.03 0.015 240);
+
+  /* Playful Accent Colors */
+  --color-electric-blue: oklch(0.684 0.198 240);
+  --color-cyber-purple: oklch(0.624 0.218 280);
+  --color-neon-teal: oklch(0.784 0.158 180);
+
+  /* Typography */
+  --font-family-sans:
+    ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-mono:
+    ui-monospace, SFMono-Regular, "SF Mono", Consolas, "Liberation Mono", Menlo,
+    monospace;
+}

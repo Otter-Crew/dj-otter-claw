@@ -1,0 +1,117 @@
+---
+import Layout from "../layouts/Layout.astro";
+import BioContent from "../components/BioContent.astro";
+import { Image } from "astro:assets";
+import headshot from "../assets/headshot.jpg";
+---
+
+<Layout
+  title="About Elliott Clark - DJ Otter Claw"
+  description="Meet Elliott Clark, professional DJ based in Franklin, TN. Learn about his experience providing music for weddings, corporate events, and pop-up club nights."
+>
+  <div class="min-h-screen bg-midnight-950 py-16 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto">
+      <!-- Page Header -->
+      <div class="text-center mb-16">
+        <h1
+          class="text-4xl sm:text-5xl md:text-6xl font-bold text-midnight-50 mb-6"
+        >
+          Meet <span class="text-electric-blue">Elliott Clark</span>
+        </h1>
+        <p class="text-xl sm:text-2xl text-midnight-300 max-w-3xl mx-auto">
+          The creative mind and musical expertise behind DJ Otter Claw
+        </p>
+      </div>
+
+      <!-- Main Content -->
+      <div class="grid lg:grid-cols-2 gap-12 items-start">
+        <!-- Photo Section -->
+        <div class="order-2 lg:order-1">
+          <div class="relative">
+            <div
+              class="bg-linear-to-br from-electric-blue/20 via-cyber-purple/20 to-neon-teal/20 p-1 rounded-2xl"
+            >
+              <div class="bg-midnight-900 p-4 rounded-xl">
+                <Image
+                  src={headshot}
+                  alt="Elliott Clark - Professional DJ"
+                  class="w-full h-auto rounded-lg shadow-2xl"
+                  width={500}
+                  height={600}
+                />
+              </div>
+            </div>
+
+            <!-- Decorative Elements -->
+            <div
+              class="absolute -top-4 -left-4 w-24 h-24 bg-electric-blue/10 rounded-full blur-xl"
+            >
+            </div>
+            <div
+              class="absolute -bottom-4 -right-4 w-32 h-32 bg-cyber-purple/10 rounded-full blur-xl"
+            >
+            </div>
+          </div>
+
+          <!-- Contact Quick Info -->
+          <div
+            class="mt-8 bg-midnight-800/50 border border-midnight-700 rounded-xl p-6"
+          >
+            <h3 class="text-xl font-bold text-electric-blue mb-4">
+              Quick Connect
+            </h3>
+            <div class="space-y-3">
+              <div class="flex items-center text-midnight-200">
+                <svg
+                  class="w-5 h-5 text-neon-teal mr-3"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                <span>Based in Franklin, TN</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bio Content Section -->
+        <div class="order-1 lg:order-2">
+          <BioContent />
+        </div>
+      </div>
+
+      <!-- Bottom CTA Section -->
+      <div
+        class="mt-20 text-center bg-midnight-900/50 border border-midnight-700 rounded-2xl p-12"
+      >
+        <h2 class="text-3xl font-bold text-midnight-50 mb-4">
+          Ready to Work Together?
+        </h2>
+        <p class="text-lg text-midnight-300 mb-8 max-w-2xl mx-auto">
+          Whether you're planning an intimate gathering or a large celebration,
+          I'm here to help create the perfect musical experience for your event.
+        </p>
+        <div
+          class="flex flex-col sm:flex-row gap-4 justify-center items-center"
+        >
+          <a
+            href="/booking"
+            class="bg-electric-blue hover:bg-cyber-purple text-midnight-950 font-semibold px-8 py-3 rounded-lg text-lg transition-all duration-300 transform hover:scale-105"
+          >
+            Book a Consultation
+          </a>
+          <a
+            href="/services"
+            class="border-2 border-electric-blue text-electric-blue hover:bg-electric-blue hover:text-midnight-950 font-semibold px-8 py-3 rounded-lg text-lg transition-all duration-300"
+          >
+            View Services & Pricing
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
