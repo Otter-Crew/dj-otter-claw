@@ -6,7 +6,6 @@
   name="booking-inquiry"
   method="POST"
   data-netlify="true"
-  netlify-honeypot="bot-field"
   action="/booking/success"
   class="space-y-6"
 >
@@ -32,7 +31,7 @@
         name="name"
         id="name"
         required
-        class="w-full px-4 py-3 bg-midnight-800 border border-midnight-700 rounded-lg text-midnight-50 placeholder-midnight-400 focus:border-electric-blue focus:outline-none focus:ring-1 focus:ring-electric-blue transition-colors duration-200"
+        class="w-full px-4 py-3 bg-midnight-800 border border-midnight-600 rounded-lg text-midnight-50 placeholder-midnight-400 focus:border-electric-blue focus:outline-none focus:ring-1 focus:ring-electric-blue transition-colors duration-200"
         placeholder="Your full name"
       />
     </div>
@@ -49,7 +48,7 @@
         name="email"
         id="email"
         required
-        class="w-full px-4 py-3 bg-midnight-800 border border-midnight-700 rounded-lg text-midnight-50 placeholder-midnight-400 focus:border-electric-blue focus:outline-none focus:ring-1 focus:ring-electric-blue transition-colors duration-200"
+        class="w-full px-4 py-3 bg-midnight-800 border border-midnight-600 rounded-lg text-midnight-50 placeholder-midnight-400 focus:border-electric-blue focus:outline-none focus:ring-1 focus:ring-electric-blue transition-colors duration-200"
         placeholder="your@email.com"
       />
     </div>
@@ -68,7 +67,7 @@
         type="tel"
         name="phone"
         id="phone"
-        class="w-full px-4 py-3 bg-midnight-800 border border-midnight-700 rounded-lg text-midnight-50 placeholder-midnight-400 focus:border-electric-blue focus:outline-none focus:ring-1 focus:ring-electric-blue transition-colors duration-200"
+        class="w-full px-4 py-3 bg-midnight-800 border border-midnight-600 rounded-lg text-midnight-50 placeholder-midnight-400 focus:border-electric-blue focus:outline-none focus:ring-1 focus:ring-electric-blue transition-colors duration-200"
         placeholder="(555) 123-4567"
       />
     </div>
@@ -84,7 +83,7 @@
         name="service-type"
         id="service-type"
         required
-        class="w-full px-4 py-3 bg-midnight-800 border border-midnight-700 rounded-lg text-midnight-50 focus:border-electric-blue focus:outline-none focus:ring-1 focus:ring-electric-blue transition-colors duration-200"
+        class="w-full px-4 py-3 bg-midnight-800 border border-midnight-600 rounded-lg text-midnight-50 focus:border-electric-blue focus:outline-none focus:ring-1 focus:ring-electric-blue transition-colors duration-200"
       >
         <option value="">Select a service</option>
         <option value="wedding">Wedding DJ</option>
@@ -109,7 +108,7 @@
         name="event-date"
         id="event-date"
         required
-        class="w-full px-4 py-3 bg-midnight-800 border border-midnight-700 rounded-lg text-midnight-50 focus:border-electric-blue focus:outline-none focus:ring-1 focus:ring-electric-blue transition-colors duration-200"
+        class="w-full px-4 py-3 bg-midnight-800 border border-midnight-600 rounded-lg text-midnight-50 focus:border-electric-blue focus:outline-none focus:ring-1 focus:ring-electric-blue transition-colors duration-200"
       />
     </div>
 
@@ -125,7 +124,7 @@
         name="guest-count"
         id="guest-count"
         min="1"
-        class="w-full px-4 py-3 bg-midnight-800 border border-midnight-700 rounded-lg text-midnight-50 placeholder-midnight-400 focus:border-electric-blue focus:outline-none focus:ring-1 focus:ring-electric-blue transition-colors duration-200"
+        class="w-full px-4 py-3 bg-midnight-800 border border-midnight-600 rounded-lg text-midnight-50 placeholder-midnight-400 focus:border-electric-blue focus:outline-none focus:ring-1 focus:ring-electric-blue transition-colors duration-200"
         placeholder="Number of guests"
       />
     </div>
@@ -144,7 +143,7 @@
         type="text"
         name="venue-name"
         id="venue-name"
-        class="w-full px-4 py-3 bg-midnight-800 border border-midnight-700 rounded-lg text-midnight-50 placeholder-midnight-400 focus:border-electric-blue focus:outline-none focus:ring-1 focus:ring-electric-blue transition-colors duration-200"
+        class="w-full px-4 py-3 bg-midnight-800 border border-midnight-600 rounded-lg text-midnight-50 placeholder-midnight-400 focus:border-electric-blue focus:outline-none focus:ring-1 focus:ring-electric-blue transition-colors duration-200"
         placeholder="Venue or location name"
       />
     </div>
@@ -160,27 +159,10 @@
         type="text"
         name="venue-location"
         id="venue-location"
-        class="w-full px-4 py-3 bg-midnight-800 border border-midnight-700 rounded-lg text-midnight-50 placeholder-midnight-400 focus:border-electric-blue focus:outline-none focus:ring-1 focus:ring-electric-blue transition-colors duration-200"
+        class="w-full px-4 py-3 bg-midnight-800 border border-midnight-600 rounded-lg text-midnight-50 placeholder-midnight-400 focus:border-electric-blue focus:outline-none focus:ring-1 focus:ring-electric-blue transition-colors duration-200"
         placeholder="Franklin, TN"
       />
     </div>
-  </div>
-
-  <!-- Event Details -->
-  <div>
-    <label
-      for="event-duration"
-      class="block text-sm font-medium text-midnight-100 mb-2"
-    >
-      Event Duration & Timeline
-    </label>
-    <input
-      type="text"
-      name="event-duration"
-      id="event-duration"
-      class="w-full px-4 py-3 bg-midnight-800 border border-midnight-700 rounded-lg text-midnight-50 placeholder-midnight-400 focus:border-electric-blue focus:outline-none focus:ring-1 focus:ring-electric-blue transition-colors duration-200"
-      placeholder="e.g., 6:00 PM - 11:00 PM (5 hours)"
-    />
   </div>
 
   <!-- Budget Range -->
@@ -194,7 +176,7 @@
     <select
       name="budget-range"
       id="budget-range"
-      class="w-full px-4 py-3 bg-midnight-800 border border-midnight-700 rounded-lg text-midnight-50 focus:border-electric-blue focus:outline-none focus:ring-1 focus:ring-electric-blue transition-colors duration-200"
+      class="w-full px-4 py-3 bg-midnight-800 border border-midnight-600 rounded-lg text-midnight-50 focus:border-electric-blue focus:outline-none focus:ring-1 focus:ring-electric-blue transition-colors duration-200"
     >
       <option value="">Select budget range</option>
       <option value="under-700">Under $700</option>
@@ -211,14 +193,13 @@
       for="message"
       class="block text-sm font-medium text-midnight-100 mb-2"
     >
-      Tell me about your event *
+      Tell me about your event
     </label>
     <textarea
       name="message"
       id="message"
       rows="5"
-      required
-      class="w-full px-4 py-3 bg-midnight-800 border border-midnight-700 rounded-lg text-midnight-50 placeholder-midnight-400 focus:border-electric-blue focus:outline-none focus:ring-1 focus:ring-electric-blue transition-colors duration-200"
+      class="w-full px-4 py-3 bg-midnight-800 border border-midnight-600 rounded-lg text-midnight-50 placeholder-midnight-400 focus:border-electric-blue focus:outline-none focus:ring-1 focus:ring-electric-blue transition-colors duration-200"
       placeholder="Describe your event, music preferences, special requests, or any questions you have..."
     ></textarea>
   </div>
@@ -236,7 +217,7 @@
 
   <!-- Form Footer -->
   <div
-    class="text-center text-sm text-midnight-300 border-t border-midnight-700 pt-6"
+    class="text-center text-sm text-midnight-300 border-t border-midnight-600 pt-6"
   >
     <p>
       Response time: Usually within 24 hours. For urgent requests, call
