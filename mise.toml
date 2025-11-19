@@ -1,0 +1,14 @@
+experimental_monorepo_root = true
+
+[tools]
+age = "latest"
+fnox = "latest"
+gh = "latest"
+node = "latest"
+
+[settings]
+lockfile = true
+
+[env]
+MISE_EXPERIMENTAL = 1
+_.file = { path = ".env", redact = true }
