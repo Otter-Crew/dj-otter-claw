@@ -29,7 +29,7 @@ const { title, description, features, pricing, icon, accentColor, id } =
       {title}
     </h3>
 
-    <p class="text-midnight-300 text-center mb-6 leading-relaxed">
+    <p class="text-midnight-200 text-center mb-6 leading-relaxed">
       {description}
     </p>
   </div>
@@ -42,7 +42,7 @@ const { title, description, features, pricing, icon, accentColor, id } =
     <ul class="space-y-3">
       {
         features.map((feature) => (
-          <li class="flex items-start text-midnight-200">
+          <li class="flex items-start text-midnight-100">
             <svg
               class={`w-5 h-5 text-${accentColor} mr-3 mt-0.5 shrink-0`}
               fill="currentColor"
@@ -63,7 +63,7 @@ const { title, description, features, pricing, icon, accentColor, id } =
 
   <!-- Pricing -->
   <div class="text-center border-t border-midnight-700 pt-6 mt-auto">
-    <p class="text-sm text-midnight-400 mb-2">Starting from</p>
+    <p class="text-sm text-midnight-300 mb-2">Starting from</p>
     <p class="text-3xl font-bold text-electric-blue mb-6">{pricing}</p>
 
     <a
